@@ -1,5 +1,8 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unescaped-entities */
 
-const Hero = () => {
+
+const Hero = ({onDiscoverClick, onJourneyClick, onCheckHealthClick}) => {
   return (
     <section className="hero">
       <div className="content">
@@ -15,8 +18,9 @@ const Hero = () => {
         </div>
 
         <div className="buttons">
-          <button>Start Your Journey</button>
-          <button>Discover Your Plan</button>
+          <button onClick={onCheckHealthClick}>Check Your Health</button>
+          <button onClick={onJourneyClick}>Start Your Journey</button>
+          <button onClick={onDiscoverClick}>Discover Your Plan</button>
         </div>
       </div>
     </section>

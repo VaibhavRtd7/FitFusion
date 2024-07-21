@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Pricing = () => {
+
   const pricing = [
     {
       imgUrl: "/pricing.jpg",
@@ -22,6 +23,7 @@ const Pricing = () => {
       length: 12,
     },
   ];
+  
   return (
     <section className="pricing">
       <h1>ELITE EDGE FITNESS PLANS</h1>

@@ -12,11 +12,11 @@ const Contact = () => {
 
   const sendMail = async (e) => {
     e.preventDefault();
-    console.log("e ", e)
+    // console.log("e ", e)
     setLoading(true);
     try {
       const { data } = await axios.post(
-        "https://fitfusion-backend-uv82.onrender.com",
+        `${import.meta.env.VITE_API_URL}/send/mail`,
         {
           name,
           email,
@@ -29,11 +29,13 @@ const Contact = () => {
       setName("");
       setEmail("");
       setMessage("");
-      toast.success("data.message");
+      console.log("success")
+      toast.success(data.message);
       setLoading(false);
     } catch (error) {
+      console.log('error')
       setLoading(false);
-      toast.error("error.response.data.message");
+      toast.error(error.response.data.message);
     }
   };
 
